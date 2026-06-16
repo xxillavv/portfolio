@@ -1,0 +1,44 @@
+@use "../../../app/variables.scss" as *;
+
+.contacts {
+  margin-bottom: 145px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title,
+.span {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  background-color: $pink;
+  width: 127px;
+  height: 1px;
+  margin-left: 25px;
+  top: 50%;
+}
+
+.span {
+  color: $pink;
+}
+
+.text {
+  color: $grey;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 505px;
+  line-height: 1.7;
+}

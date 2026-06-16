@@ -1,0 +1,49 @@
+@use "../../../app/variables.scss" as *;
+
+.quote {
+  margin-bottom: 74px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 24px;
+  max-width: 735px;
+}
+
+.text {
+  position: relative;
+  padding: 42px;
+  font-weight: 500;
+  border: 1px solid $grey;
+}
+
+.text::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/quotes.svg");
+  width: 42px;
+  height: 32px;
+  top: -13px;
+  left: 14px;
+}
+
+.text::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/quotes.svg");
+  width: 42px;
+  height: 32px;
+  bottom: -20px;
+  right: 14px;
+}
+
+.subtext {
+  align-self: end;
+  padding: 24px;
+  font-weight: 400;
+  border: 1px solid $grey;
+  margin-top: -1px;
+}

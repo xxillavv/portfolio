@@ -1,0 +1,52 @@
+@use '../../../app/variables.scss' as *;
+
+.info {
+  padding: 16px;
+  border: 1px solid $grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.link {
+  position: relative;
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  margin-left: 35px;
+}
+
+.info a:nth-of-type(1)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/discord.svg");
+  width: 32px;
+  height: 32px;
+  margin-left: -38px;
+  margin-top: -6px;
+}
+
+.info a:nth-of-type(2)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/email.svg");
+  width: 32px;
+  height: 32px;
+  margin-left: -38px;
+  margin-top: -6px;
+}
+
+.info a:nth-of-type(3)::before {
+  position: absolute;
+  content: "";
+  background-image: url('../../../public/tg.svg');
+  width: 25px;
+  height: 23px;
+  margin-left: -38px;
+}

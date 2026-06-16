@@ -1,0 +1,44 @@
+@use "../../../../app/variables.scss" as *;
+
+.project {
+  border: 1px solid $grey;
+}
+
+.title,
+.stack,
+.description {
+  max-width: 280px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.info {
+  border-top: 1px solid $grey;
+  padding: 24px;
+  padding-bottom: 32px;
+}
+
+.stack {
+  padding: 10px 16px;
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.description {
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.link {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid $pink;
+}

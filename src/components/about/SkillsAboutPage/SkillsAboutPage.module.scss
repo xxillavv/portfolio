@@ -1,0 +1,11 @@
+@use '../../../app/variables.scss' as *;
+
+.skills {
+  margin-bottom: 100px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}

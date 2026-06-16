@@ -1,0 +1,11 @@
+@use '../../../app/variables.scss' as *;
+
+.small {
+  margin-bottom: 200px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

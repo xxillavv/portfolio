@@ -1,0 +1,68 @@
+@use "../../../app/variables.scss" as *;
+
+.media {
+  margin-bottom: 225bpx;
+  height: 35vh;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  position: relative;
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 37px;
+}
+
+.link:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/instagram.svg");
+  width: 22px;
+  height: 22px;
+  margin-left: -33px;
+  margin-top: -1px;
+}
+
+.link:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/email.svg");
+  width: 32px;
+  height: 32px;
+  margin-left: -38px;
+  margin-top: -6px;
+}
+
+.link:nth-child(3)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/tg.svg");
+  width: 25px;
+  height: 23px;
+  margin-left: -38px;
+}
+
+.link:nth-child(4)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/discord.svg");
+  width: 32px;
+  height: 32px;
+  margin-left: -38px;
+  margin-top: -6px;
+}
+
+.link:nth-child(5)::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../../public/linkedin.svg");
+  width: 26px;
+  height: 26px;
+  margin-left: -38px;
+  margin-top: -4px;
+}

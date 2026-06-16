@@ -1,0 +1,53 @@
+@use "../../../app/variables.scss" as *;
+
+.projects {
+  margin-bottom: 106px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::after {
+  position: absolute;
+  content: "";
+  background-color: $pink;
+  width: 701px;
+  height: 1px;
+  margin-left: 25px;
+  top: 50%;
+}
+
+.heading,
+.span {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.span {
+  color: $pink;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bottom {
+
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}

@@ -1,0 +1,49 @@
+@use "../../../app/variables.scss" as *;
+
+.skills {
+  margin-bottom: 112px;
+}
+
+.header,
+.span {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.header::after {
+  position: absolute;
+  content: "";
+  background-color: $pink;
+  width: 239px;
+  height: 1px;
+  margin-left: 25px;
+  top: 50%;
+}
+
+.image {
+  margin-left: 32px;
+  margin-top: 22px;
+}
+
+.span {
+  color: $pink;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skillsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 50%;
+  gap: 20px;
+}

@@ -1,0 +1,11 @@
+@use "../../../app/variables.scss" as *;
+
+.heading,
+.span {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.span {
+  color: $pink;
+}

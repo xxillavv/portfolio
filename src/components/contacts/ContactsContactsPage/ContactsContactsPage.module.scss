@@ -1,0 +1,45 @@
+@use "../../../app/variables.scss" as *;
+
+.contacts {
+  margin-bottom: 80px;
+}
+
+.subHeader {
+  margin-bottom: 46px;
+}
+
+.text {
+  color: $grey;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  max-width: 505px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+}
+
+.item {
+  padding: 16px;
+  border: 1px solid $grey;
+  align-self: start;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+}
