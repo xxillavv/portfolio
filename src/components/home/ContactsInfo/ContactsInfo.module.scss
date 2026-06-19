@@ -1,4 +1,4 @@
-@use '../../../app/variables.scss' as *;
+@use "../../../app/variables.scss" as *;
 
 .info {
   padding: 16px;
@@ -45,7 +45,7 @@
 .info a:nth-of-type(3)::before {
   position: absolute;
   content: "";
-  background-image: url('../../../public/tg.svg');
+  background-image: url("../../../public/tg.svg");
   width: 25px;
   height: 23px;
   margin-left: -38px;

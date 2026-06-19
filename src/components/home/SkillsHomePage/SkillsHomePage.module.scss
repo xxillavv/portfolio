@@ -28,6 +28,10 @@
 .image {
   margin-left: 32px;
   margin-top: 22px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .span {
@@ -46,4 +50,9 @@
   flex-wrap: wrap;
   max-width: 50%;
   gap: 20px;
+
+  @media (max-width: 900) {
+    max-width: none;
+    justify-content: flex-start;
+  }
 }

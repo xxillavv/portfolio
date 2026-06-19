@@ -35,6 +35,7 @@ const AboutMe = () => {
             alt="about-me-image"
             width={343}
             height={500}
+            className={styles.image}
           />
         </div>
       </div>

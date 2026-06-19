@@ -8,6 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 885px) {
+    gap: 30px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .title,
@@ -41,4 +50,9 @@
   font-weight: 500;
   max-width: 505px;
   line-height: 1.7;
+
+  @media (max-width: 400px) {
+    font-size: 15px;
+    font-weight: 400;  
+  }
 }

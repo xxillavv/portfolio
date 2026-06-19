@@ -29,6 +29,7 @@ const AboutAboutPage = () => {
             alt="about-section-image"
             width={339}
             height={507}
+            className={styles.image}
           />
         </div>
       </div>

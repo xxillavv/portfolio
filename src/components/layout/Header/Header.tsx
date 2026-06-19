@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "@/public/logo.svg";
 import Link from "next/link";
 import NavList from "./NavList/NavList";
+import AdaptationButton from "./AdaptationButton/AdaptationButton";
 
 export const Header = () => {
   return (
@@ -15,6 +16,7 @@ export const Header = () => {
               <h1 className={styles.name}>Vladyslav</h1>
             </Link>
           </div>
+          <AdaptationButton />
           <div className={styles.right}>
             <NavList />
           </div>

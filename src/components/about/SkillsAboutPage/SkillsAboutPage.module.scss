@@ -8,4 +8,13 @@
   display: flex;
   gap: 30px;
   align-items: flex-start;
+
+  @media (max-width: 1300px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @media (max-width: 620px) {
+    justify-content: flex-start;
+  }
 }

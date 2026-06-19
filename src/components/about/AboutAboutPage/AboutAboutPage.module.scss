@@ -6,6 +6,10 @@
 
 .subHeader {
   margin-bottom: 8px;
+
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+  }
 }
 
 .text {
@@ -20,4 +24,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+  }
+}
+
+.image {
+  @media (max-width: 750px) {
+    display: none;
+  }
 }

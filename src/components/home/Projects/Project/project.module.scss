@@ -10,6 +10,17 @@
   max-width: 280px;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 779px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .title {
   font-size: 24px;
   font-weight: 500;
@@ -20,6 +31,11 @@
   border-top: 1px solid $grey;
   padding: 24px;
   padding-bottom: 32px;
+
+  @media (max-width: 1150px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .stack {
@@ -27,6 +43,10 @@
   color: $grey;
   font-size: 16px;
   font-weight: 400;
+
+  @media (max-width: 779px) {
+    padding: 18px 0;
+  }
 }
 
 .description {
@@ -41,4 +61,13 @@
   font-size: 16px;
   font-weight: 500;
   border: 1px solid $pink;
+
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }

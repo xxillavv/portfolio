@@ -13,11 +13,12 @@ type TProps = {
   };
 };
 
+
 const Project = ({ props }: TProps) => {
   return (
     <div className={styles.project}>
-      <div>
-        {props.src && <Image src={props.src} alt={title} width={330} height={201}/>}
+      <div className={styles.wrapper}>
+        {props.src && <Image src={props.src} alt={title} width={330} height={201} className={styles.image}/>}
         <p className={styles.stack}>{props.stack}</p>
         <div className={styles.info}>
           <h4 className={styles.title}>{props.title}</h4>

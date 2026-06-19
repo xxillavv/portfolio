@@ -63,7 +63,7 @@ export const smallProjects = [
     title: "Simple Chat application",
     stack: "NestJs Socket.io Next.js",
     description: "Realtime chat using socket.io",
-    link: "https://github.com/xxillavv/iphone-site",
+    link: "https://github.com/xxillavv/websocket-chat",
   }
 ]
 

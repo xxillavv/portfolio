@@ -2,6 +2,10 @@
 
 .facts {
   margin-bottom: 162px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 100px;
+  }
 }
 
 .wrapper {
@@ -14,6 +18,10 @@
   flex-wrap: wrap;
   max-width: 50%;
   gap: 16px;
+
+  @media (max-width: 900px) {
+    max-width: none;
+  }
 }
 
 .text {
@@ -24,4 +32,10 @@
   line-height: normal;
   padding: 8px;
   border: 1px solid $grey;
+}
+
+.image {
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

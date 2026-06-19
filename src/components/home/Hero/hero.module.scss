@@ -9,6 +9,28 @@
   justify-content: center;
   gap: 50px;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.left {
+  @media (max-width: 1000px) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 650px) {
+    text-align: left;
+    align-items: start;
+  }
 }
 
 .title {
@@ -28,6 +50,10 @@
   line-height: 25px;
   max-width: 463px;
   margin-bottom: 32px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 0;
+  }
 }
 
 .link {
@@ -35,6 +61,10 @@
   border: 1px solid $pink;
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 }
 
 .rightSubtitle {
@@ -53,12 +83,21 @@
   width: 16px;
   height: 16px;
   background-color: $pink;
-  top: 7px;
+  top: 10px;
   left: 7px;
+
+  @media (max-width: 463px) {
+    top: 20px;
+  }
 }
 
 .rightSpan {
   color: $white;
   font-size: 16px;
   font-weight: 600;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }

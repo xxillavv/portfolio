@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+
+  @media (max-width: 780px) {
+    margin-bottom: 100px;
+  }
 }
 
 .heading {
@@ -28,12 +32,24 @@
   height: 1px;
   margin-left: 25px;
   top: 50%;
+
+  @media (max-width: 1150px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 780px) {
+    width: 0;
+  }
 }
 
 .heading,
 .span {
   font-size: 32px;
   font-weight: 500;
+
+  @media (max-width: 780px) {
+    font-size: 28px;
+  }
 }
 
 .span {
@@ -43,11 +59,24 @@
 .link {
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: 1150px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 18px;
+  }
 }
 
 .bottom {
-
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: start;
+
+  @media (max-width: 1150px) {
+    justify-content: center;
+    align-items: center;
+  }
 }

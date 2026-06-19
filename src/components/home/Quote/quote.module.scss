@@ -2,6 +2,10 @@
 
 .quote {
   margin-bottom: 74px;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -11,6 +15,14 @@
   color: #fff;
   font-size: 24px;
   max-width: 735px;
+
+  @media (max-width: 1000px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 100%;
+  }
 }
 
 .text {
@@ -18,6 +30,15 @@
   padding: 42px;
   font-weight: 500;
   border: 1px solid $grey;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  @media (max-width: 650px) {
+    padding: 28px;
+  }
 }
 
 .text::before {
@@ -46,4 +67,13 @@
   font-weight: 400;
   border: 1px solid $grey;
   margin-top: -1px;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  @media (max-width: 650px) {
+    padding: 16px;
+  }
 }

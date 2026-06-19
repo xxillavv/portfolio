@@ -24,6 +24,7 @@ export const Facts = () => {
             alt="facts-section-background-image"
             width={178}
             height={169}
+            className={styles.image}
           />
         </div>
       </div>

@@ -1,13 +1,25 @@
 @use "../../../app/variables.scss" as *;
 
 .media {
-  margin-bottom: 225bpx;
   height: 35vh;
+
+  @media (max-width: 1000px) {
+    height: auto;
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 100px;
+  }
 }
 
 .wrapper {
   display: flex;
   gap: 40px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column; 
+  }
 }
 
 .link {

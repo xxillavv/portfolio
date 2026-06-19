@@ -8,7 +8,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className="container">
         <div className={styles.wrapper}>
-          <div>
+          <div className={styles.left}>
             <h2 className={styles.title}>
               Vladyslav is a <span className={styles.leftSpan}>front-end and back-end developer</span>
             </h2>
@@ -19,12 +19,13 @@ const Hero = () => {
               Contact me!!
             </Link>
           </div>
-          <div className="hero__right">
+          <div className={styles.right}>
             <Image
               src={heroImage}
               width={457}
               height={386}
               alt="hero-section-image"
+              className={styles.image}
             />
             <p className={styles.rightSubtitle}>
               Currently working on <span className={styles.rightSpan}>Portfolio</span>
