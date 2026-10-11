@@ -1,6 +1,6 @@
 import styles from './hero.module.scss'
-import Image from "next/image";
-import heroImage from "@/public/hero-image.png";
+import { CodeWindow } from "@/components/common/CodeWindow/CodeWindow";
+import { heroCode } from "@/data/data";
 import Link from 'next/link';
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <h2 className={styles.title}>
-              Vladyslav is a <span className={styles.leftSpan}>front-end and back-end developer</span>
+              Vladyslav is a <span className={styles.leftSpan}><span className={styles.nowrap}>front-end</span> and <span className={styles.nowrap}>back-end</span> developer</span>
             </h2>
             <p className={styles.leftSubtitle}>
               He crafts responsive websites where technologies meet creativity
@@ -20,15 +20,9 @@ const Hero = () => {
             </Link>
           </div>
           <div className={styles.right}>
-            <Image
-              src={heroImage}
-              width={457}
-              height={386}
-              alt="hero-section-image"
-              className={styles.image}
-            />
+            <CodeWindow fileName="vladyslav.ts" lines={heroCode} className={styles.image} />
             <p className={styles.rightSubtitle}>
-              Currently working on <span className={styles.rightSpan}>Portfolio</span>
+              Currently working on <span className={styles.rightSpan}>NEXUS.gg</span>
             </p>
           </div>
         </div>

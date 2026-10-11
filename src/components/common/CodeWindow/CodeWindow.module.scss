@@ -1,0 +1,142 @@
+@use "../../../app/variables.scss" as *;
+
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 24px 40px 40px;
+
+  @media (max-width: 480px) {
+    padding: 24px 12px 24px 24px;
+  }
+}
+
+// Pink outlined squares (as in the old decorative PNGs)
+.squares,
+.squares::before {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border: 1px solid $pink;
+}
+
+.squares {
+  top: 0;
+  left: 0;
+}
+
+.squares::before {
+  content: "";
+  top: 30px;
+  left: 30px;
+}
+
+// Grey dot grid
+.dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 84px;
+  height: 84px;
+  background-image: radial-gradient($grey 1.5px, transparent 1.5px);
+  background-size: 17px 17px;
+  opacity: 0.6;
+}
+
+.window {
+  position: relative;
+  z-index: 1;
+  background: #21252b;
+  border: 1px solid $grey;
+  box-shadow: 12px 12px 0 rgba($pink, 0.15);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid $grey;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $grey;
+  border-radius: 50%;
+
+  &:first-child {
+    background: $pink;
+    border-color: $pink;
+  }
+}
+
+.fileName {
+  margin-left: auto;
+  color: $grey;
+  font-size: 13px;
+}
+
+.code {
+  margin: 0;
+  padding: 16px 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 24px;
+  overflow-x: auto;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.line {
+  display: flex;
+  white-space: pre;
+
+  @media (max-width: 400px) {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
+
+.lineNumber {
+  flex-shrink: 0;
+  width: 40px;
+  padding-right: 16px;
+
+  @media (max-width: 400px) {
+    width: 30px;
+    padding-right: 10px;
+  }
+  text-align: right;
+  color: rgba($grey, 0.4);
+  user-select: none;
+}
+
+.keyword {
+  color: $pink;
+}
+
+.variable {
+  color: #61afef;
+}
+
+.property {
+  color: #e5c07b;
+}
+
+.string {
+  color: #98c379;
+}
+
+.punct,
+.plain {
+  color: $grey;
+}
+
+.comment {
+  color: rgba($grey, 0.55);
+  font-style: italic;
+}

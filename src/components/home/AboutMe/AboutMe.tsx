@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./aboutme.module.scss";
-import Image from "next/image";
-import aboutImage from "@/public/about-image.png";
+import { CodeWindow } from "@/components/common/CodeWindow/CodeWindow";
+import { aboutCode } from "@/data/data";
 
 const AboutMe = () => {
   return (
@@ -30,13 +30,7 @@ const AboutMe = () => {
               {"Read More ->"}
             </Link>
           </div>
-          <Image
-            src={aboutImage}
-            alt="about-me-image"
-            width={343}
-            height={500}
-            className={styles.image}
-          />
+          <CodeWindow fileName="~/about" lines={aboutCode} className={styles.image} />
         </div>
       </div>
     </section>

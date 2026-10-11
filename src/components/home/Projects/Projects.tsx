@@ -17,7 +17,7 @@ const Projects = () => {
             </Link>
           </div>
           <div className={styles.bottom}>
-            {projects.map((el) => {
+            {projects.slice(0, 3).map((el) => {
               return <Project props={el} key={el.id} />;
             })}
           </div>

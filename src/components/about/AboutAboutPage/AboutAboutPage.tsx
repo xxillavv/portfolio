@@ -1,6 +1,6 @@
-import Image from "next/image";
 import styles from "./AboutAboutPage.module.scss";
-import aboutImage from "@/public/about-image.png";
+import { CodeWindow } from "@/components/common/CodeWindow/CodeWindow";
+import { aboutCode } from "@/data/data";
 import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 
 const AboutAboutPage = () => {
@@ -24,13 +24,7 @@ const AboutAboutPage = () => {
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>
-          <Image
-            src={aboutImage}
-            alt="about-section-image"
-            width={339}
-            height={507}
-            className={styles.image}
-          />
+          <CodeWindow fileName="~/about" lines={aboutCode} className={styles.image} />
         </div>
       </div>
     </section>

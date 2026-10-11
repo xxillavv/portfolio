@@ -31,6 +31,8 @@
 }
 
 .image {
+  flex: 0 1 420px;
+
   @media (max-width: 750px) {
     display: none;
   }

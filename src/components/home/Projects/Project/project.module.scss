@@ -68,6 +68,25 @@
 }
 
 .image {
+  display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media (max-width: 1150px) {
+    justify-content: center;
+  }
+}
+
+.secondary {
+  border-color: $grey;
+  color: $grey;
 }
