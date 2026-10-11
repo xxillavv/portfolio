@@ -2,14 +2,19 @@
 
 .skills {
   margin-bottom: 112px;
+  // orbiting chips may brush the screen edge on phones; never scroll sideways
+  overflow-x: clip;
 }
 
-.image {
-  margin-left: 32px;
-  margin-top: 22px;
+.orbit {
+  flex: 0 1 520px;
+  padding: 24px;
 
   @media (max-width: 900px) {
-    display: none;
+    flex-basis: auto;
+    width: 100%;
+    max-width: 460px;
+    padding: 24px 8px;
   }
 }
 
@@ -18,6 +23,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .skillsWrapper {

@@ -1,0 +1,142 @@
+@use "../../../../app/variables.scss" as *;
+
+// Sizes are in container units so the whole orbit scales with its width
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.toneInner {
+  --tone: #{$pink};
+}
+
+.toneMiddle {
+  --tone: #61afef;
+}
+
+.toneOuter {
+  --tone: #{$grey};
+}
+
+.orbit {
+  --k: 1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  container-type: inline-size;
+
+  // phones only fit two rings: drop the outer one and spread the rest
+  @media (max-width: 480px) {
+    --k: 1.2;
+  }
+}
+
+.ring.toneOuter,
+.legendItem.toneOuter {
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.ring {
+  position: absolute;
+  inset: calc(50% - var(--radius) * var(--k) * 1cqi);
+  border: 1px dashed color-mix(in srgb, var(--tone) 40%, transparent);
+  border-radius: 50%;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  animation: spin var(--duration) linear infinite;
+
+  &.reverse {
+    animation-direction: reverse;
+  }
+}
+
+// Place each item on the ring, then undo the angle so the chip stays upright
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--angle)) translateX(calc(var(--radius) * var(--k) * 1cqi)) rotate(calc(var(--angle) * -1));
+}
+
+.chip {
+  padding: 4px 8px;
+  border: 1px solid var(--tone);
+  background-color: $surface;
+  color: $white;
+  font-size: clamp(10px, 2.7cqi, 14px);
+  white-space: nowrap;
+  // counter-rotate against the track so text never tilts
+  animation: spin var(--duration) linear infinite reverse;
+
+  .reverse & {
+    animation-direction: normal;
+  }
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16cqi;
+  height: 16cqi;
+  transform: translate(-50%, -50%);
+  border: 1px solid $pink;
+  background-color: $surface;
+  color: $pink;
+  font-size: 5.4cqi;
+  font-weight: 600;
+  box-shadow:
+    0 0 0 8px rgba($pink, 0.08),
+    0 0 48px rgba(124, 77, 255, 0.45);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  color: $grey;
+  font-size: 14px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--tone);
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .chip {
+    animation: none;
+  }
+}

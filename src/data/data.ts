@@ -190,3 +190,28 @@ export const socials = {
   telegram: "https://t.me/xxillav",
   instagram: "https://www.instagram.com/xxillav/",
 };
+
+// Rings of the skills orbit on the home page; radius is % of the orbit width
+export const orbit = [
+  {
+    label: "frontend",
+    radius: 19,
+    duration: "50s",
+    offset: 30,
+    items: ["React", "Next.js", "TypeScript"],
+  },
+  {
+    label: "backend & data",
+    radius: 31,
+    duration: "80s",
+    offset: 0,
+    items: ["NestJS", "PostgreSQL", "Redis", "MongoDB"],
+  },
+  {
+    label: "infra & ai",
+    radius: 42,
+    duration: "110s",
+    offset: 54,
+    items: ["Docker", "AWS", "CI/CD", "Claude Code", "Whisper"],
+  },
+];
