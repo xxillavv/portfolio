@@ -40,22 +40,22 @@
 
 .text {
   color: $grey;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.6;
   margin-bottom: 36px;
-  max-width: 515px;
+  max-width: 600px;
 
   @media (max-width: 768px) {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 30px;
     max-width: 100%;
   }
 
   @media (max-width: 480px) {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 24px;
   }
 }

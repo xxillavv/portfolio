@@ -10,17 +10,17 @@
 
 .text {
   color: $grey;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
-  max-width: 505px;
+  max-width: 600px;
 
   @media (max-width: 1100px) {
     line-height: 2;
   }
 
   @media (max-width: 430px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -57,19 +57,20 @@
 }
 
 .item {
+  background-color: rgba($surface, 0.85);
   padding: 16px;
   border: 1px solid $grey;
   align-self: start;
 }
 
 .title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 .subtitle {
   color: $grey;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }

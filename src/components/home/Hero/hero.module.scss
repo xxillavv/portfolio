@@ -43,9 +43,19 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 44px;
   font-weight: 600;
+  line-height: 1.25;
   margin-bottom: 32px;
+
+  @media (max-width: 1000px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
 }
 
 .leftSpan {
@@ -54,10 +64,10 @@
 
 .leftSubtitle {
   color: $grey;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 25px;
-  max-width: 463px;
+  line-height: 1.6;
+  max-width: 540px;
   margin-bottom: 32px;
 
   @media (max-width: 650px) {
@@ -81,10 +91,11 @@
 }
 
 .rightSubtitle {
+  background-color: rgba($surface, 0.85);
   position: relative;
   margin-top: 0;
   color: $grey;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   padding: 8px 80px 8px 34px;
   border: 1px solid $grey;
@@ -106,7 +117,7 @@
 
 .rightSpan {
   color: $white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 

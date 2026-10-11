@@ -46,9 +46,9 @@
 .window {
   position: relative;
   z-index: 1;
-  background: #21252b;
+  background: $surface;
   border: 1px solid $grey;
-  box-shadow: 12px 12px 0 rgba($pink, 0.15);
+  box-shadow: 12px 12px 0 rgba($pink, 0.18);
 }
 
 .bar {
@@ -74,20 +74,20 @@
 .fileName {
   margin-left: auto;
   color: $grey;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .code {
   margin: 0;
   padding: 16px 0;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   overflow-x: auto;
 
   @media (max-width: 480px) {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 22px;
   }
 }
 

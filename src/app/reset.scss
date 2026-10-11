@@ -80,11 +80,9 @@ main {
 }
 
 body {
-  background: var(--background, #282c33);
-  background-image: url("../public/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  background-color: #16131f;
   color: #fff;
   font-style: normal;
   line-height: normal;
@@ -160,14 +158,14 @@ button {
   padding: 8px 16px;
   border: 1px solid #c778dd;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
   &:hover {
     background-color: #c778dd;
-    color: #282c33;
+    color: #16131f;
   }
 }
 
@@ -199,4 +197,29 @@ button {
       animation-range: entry 0% entry 40%;
     }
   }
+}
+
+// Background: violet grid that fades towards the edges, with two soft glows
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(124, 77, 255, 0.22), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 0% 100%, rgba(199, 120, 221, 0.16), transparent 70%);
+}
+
+body::after {
+  background-image:
+    linear-gradient(rgba(199, 120, 221, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199, 120, 221, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 40%, transparent 100%);
 }

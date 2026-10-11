@@ -13,7 +13,7 @@
   flex-direction: column;
   margin: 0 auto;
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   max-width: 735px;
 
   @media (max-width: 1000px) {
@@ -26,13 +26,14 @@
 }
 
 .text {
+  background-color: rgba($surface, 0.85);
   position: relative;
   padding: 42px;
   font-weight: 500;
   border: 1px solid $grey;
 
   @media (max-width: 1000px) {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -41,7 +42,7 @@
   }
 
   @media (max-width: 400px) {
-    font-size: 16px;
+    font-size: 18px;
     padding: 28px 20px;
   }
 }
@@ -67,6 +68,7 @@
 }
 
 .subtext {
+  background-color: rgba($surface, 0.85);
   align-self: end;
   padding: 24px;
   font-weight: 400;
@@ -74,7 +76,7 @@
   margin-top: -1px;
 
   @media (max-width: 1000px) {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -83,6 +85,6 @@
   }
 
   @media (max-width: 400px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
