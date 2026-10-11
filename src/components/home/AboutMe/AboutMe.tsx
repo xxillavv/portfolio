@@ -2,14 +2,13 @@ import Link from "next/link";
 import styles from "./aboutme.module.scss";
 import { CodeWindow } from "@/components/common/CodeWindow/CodeWindow";
 import { aboutCode } from "@/data/data";
+import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 
 const AboutMe = () => {
   return (
     <section className={styles.about}>
       <div className="container">
-        <h3 className={styles.title}>
-          <span className={styles.span}>#</span>about-me
-        </h3>
+        <SectionTitle props={{ span: "#", text: "about-me", margin: 23 }} />
         <div className={styles.wrapper}>
           <div className={styles.left}>
             <p className={styles.text}>
@@ -26,7 +25,7 @@ const AboutMe = () => {
               establish their presence online. I always strive to learn about
               the newest technologies and frameworks.
             </p>
-            <Link className={styles.link} href="/about">
+            <Link className="btn" href="/about">
               {"Read More ->"}
             </Link>
           </div>

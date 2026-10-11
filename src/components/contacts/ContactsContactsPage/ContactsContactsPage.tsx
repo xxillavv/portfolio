@@ -7,7 +7,7 @@ const ContactsContactsPage = () => {
     <section className={styles.contacts}>
       <div className="container">
         <SectionTitle props={{ span: "/", text: "contacts", margin: 14 }} />
-        <p className={styles.subHeader}>Who am i?</p>
+        <p className={styles.subHeader}>Get in touch</p>
         <div className={styles.wrapper}>
           <p className={styles.text}>
             I’m actively looking for a full-time remote position as a Frontend

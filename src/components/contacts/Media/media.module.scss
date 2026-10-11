@@ -1,12 +1,7 @@
 @use "../../../app/variables.scss" as *;
 
 .media {
-  height: 35vh;
-
-  @media (max-width: 1000px) {
-    height: auto;
-    margin-bottom: 150px;
-  }
+  margin-bottom: 150px;
 
   @media (max-width: 450px) {
     margin-bottom: 100px;
@@ -14,67 +9,40 @@
 }
 
 .wrapper {
-  display: flex;
-  gap: 40px;
-
-  @media (max-width: 1000px) {
-    flex-direction: column; 
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
 }
 
 .link {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba($grey, 0.35);
   color: $grey;
   font-size: 16px;
   font-weight: 400;
-  margin-left: 37px;
+  overflow-wrap: anywhere;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.link:nth-child(1)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/instagram.svg");
-  width: 22px;
-  height: 22px;
-  margin-left: -33px;
-  margin-top: -1px;
+a.link:hover {
+  color: $white;
+  border-color: $pink;
 }
 
-.link:nth-child(2)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/email.svg");
-  width: 32px;
-  height: 32px;
-  margin-left: -38px;
-  margin-top: -6px;
-}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 
-.link:nth-child(3)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/tg.svg");
-  width: 25px;
-  height: 23px;
-  margin-left: -38px;
-}
-
-.link:nth-child(4)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/discord.svg");
-  width: 32px;
-  height: 32px;
-  margin-left: -38px;
-  margin-top: -6px;
-}
-
-.link:nth-child(5)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/linkedin.svg");
-  width: 26px;
-  height: 26px;
-  margin-left: -38px;
-  margin-top: -4px;
+  img {
+    width: 24px;
+    height: auto;
+    max-height: 24px;
+  }
 }

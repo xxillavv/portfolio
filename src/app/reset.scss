@@ -141,3 +141,62 @@ button {
   border: none;
   cursor: pointer;
 }
+
+// Shared UI
+
+::selection {
+  background-color: rgba(#c778dd, 0.35);
+}
+
+:focus-visible {
+  outline: 1px dashed #c778dd;
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #c778dd;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    background-color: #c778dd;
+    color: #282c33;
+  }
+}
+
+.btn-secondary {
+  border-color: #abb2bf;
+  color: #abb2bf;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+// Sections fade in as they scroll into view (browsers without
+// scroll-driven animations just show them as-is)
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main > section:not(:first-child) {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}

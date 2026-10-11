@@ -3,8 +3,11 @@
 .info {
   padding: 16px;
   border: 1px solid $grey;
-  display: flex;
-  flex-direction: column;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: $pink;
+  }
 }
 
 .infoTitle {
@@ -13,40 +16,37 @@
   margin-bottom: 16px;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .link {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: $grey;
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 16px;
-  margin-left: 35px;
+  transition: color 0.2s;
 }
 
-.info a:nth-of-type(1)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/discord.svg");
-  width: 32px;
-  height: 32px;
-  margin-left: -38px;
-  margin-top: -6px;
+a.link:hover {
+  color: $white;
 }
 
-.info a:nth-of-type(2)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/email.svg");
-  width: 32px;
-  height: 32px;
-  margin-left: -38px;
-  margin-top: -6px;
-}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 
-.info a:nth-of-type(3)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../../../public/tg.svg");
-  width: 25px;
-  height: 23px;
-  margin-left: -38px;
+  img {
+    width: 24px;
+    height: auto;
+    max-height: 24px;
+  }
 }

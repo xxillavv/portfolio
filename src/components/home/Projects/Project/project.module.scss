@@ -1,70 +1,31 @@
 @use "../../../../app/variables.scss" as *;
 
 .project {
-  border: 1px solid $grey;
-}
-
-.title,
-.stack,
-.description {
-  max-width: 280px;
-}
-
-.wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  border: 1px solid $grey;
+  background-color: rgba(#21252b, 0.6);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 
-  @media (max-width: 779px) {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  &:hover {
+    transform: translate(-4px, -4px);
+    border-color: $pink;
+    box-shadow: 8px 8px 0 rgba($pink, 0.2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }
 
-.title {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-.info {
-  border-top: 1px solid $grey;
-  padding: 24px;
-  padding-bottom: 32px;
-
-  @media (max-width: 1150px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.stack {
-  padding: 10px 16px;
-  color: $grey;
-  font-size: 16px;
-  font-weight: 400;
-
-  @media (max-width: 779px) {
-    padding: 18px 0;
-  }
-}
-
-.description {
-  color: $grey;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-
-.link {
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  border: 1px solid $pink;
-
-  @media (max-width: 1150px) {
-    text-align: center;
-  }
+.imageWrapper {
+  overflow: hidden;
+  border-bottom: 1px solid $grey;
 }
 
 .image {
@@ -74,19 +35,53 @@
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top;
+  transition: transform 0.4s;
+
+  .project:hover & {
+    transform: scale(1.03);
+  }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid $grey;
+}
+
+.tag {
+  color: $grey;
+  font-size: 13px;
+  line-height: 1;
+  padding: 5px 7px;
+  border: 1px solid rgba($grey, 0.35);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 16px 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: $grey;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-
-  @media (max-width: 1150px) {
-    justify-content: center;
-  }
-}
-
-.secondary {
-  border-color: $grey;
-  color: $grey;
+  gap: 12px;
+  margin-top: auto;
 }

@@ -2,6 +2,10 @@
 
 .hero {
   margin-bottom: 112px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 64px;
+  }
 }
 
 .wrapper {
@@ -61,14 +65,18 @@
   }
 }
 
-.link {
-  padding: 8px 16px;
-  border: 1px solid $pink;
-  font-size: 16px;
-  font-weight: 500;
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 
   @media (max-width: 650px) {
-    display: none;
+    justify-content: flex-start;
+    margin-top: 24px;
   }
 }
 

@@ -3,8 +3,8 @@
 .quote {
   margin-bottom: 74px;
 
-  @media (max-width: 400px) {
-    display: none;
+  @media (max-width: 650px) {
+    margin-bottom: 56px;
   }
 }
 
@@ -38,6 +38,11 @@
 
   @media (max-width: 650px) {
     padding: 28px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 16px;
+    padding: 28px 20px;
   }
 }
 
@@ -75,5 +80,9 @@
 
   @media (max-width: 650px) {
     padding: 16px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 16px;
   }
 }

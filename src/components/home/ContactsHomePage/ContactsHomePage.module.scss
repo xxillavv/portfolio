@@ -19,36 +19,6 @@
   }
 }
 
-.title,
-.span {
-  font-size: 32px;
-  font-weight: 500;
-}
-
-.title {
-  position: relative;
-  margin-bottom: 45px;
-}
-
-.title::after {
-  position: absolute;
-  content: "";
-  background-color: $pink;
-  width: 127px;
-  height: 1px;
-  margin-left: 25px;
-  top: 50%;
-
-  @media (max-width: 360px) {
-    width: 70px;
-    margin-left: 15px;
-  }
-}
-
-.span {
-  color: $pink;
-}
-
 .text {
   color: $grey;
   font-size: 16px;

@@ -1,13 +1,12 @@
 import { ContactsInfo } from "@/components/home/ContactsInfo/ContactsInfo";
 import styles from "./ContactsHomePage.module.scss";
+import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 
 const ContactsHomePage = () => {
   return (
     <section className={styles.contacts}>
       <div className="container">
-        <h3 className={styles.title}>
-          <span className={styles.span}>#</span>contacts
-        </h3>
+        <SectionTitle props={{ span: "#", text: "contacts", margin: 45 }} />
         <div className={styles.wrapper}>
           <p className={styles.text}>
             I’m actively looking for a full-time remote position as a Frontend

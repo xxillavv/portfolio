@@ -6,7 +6,7 @@ type TProps = {
     id: number;
     src?: StaticImageData;
     title: string;
-    stack: string;
+    stack: string[];
     description: string;
     link: string;
     demo?: string;
@@ -16,26 +16,47 @@ type TProps = {
 
 const Project = ({ props }: TProps) => {
   return (
-    <div className={styles.project}>
-      <div className={styles.wrapper}>
-        {props.src && <Image src={props.src} alt={props.title} width={330} height={201} sizes="(max-width: 779px) 90vw, 400px" quality={90} className={styles.image}/>}
-        <p className={styles.stack}>{props.stack}</p>
-        <div className={styles.info}>
-          <h4 className={styles.title}>{props.title}</h4>
-          <p className={styles.description}>{props.description}</p>
-          <div className={styles.links}>
-            {props.demo && (
-              <a className={styles.link} href={props.demo} target="_blank" rel="noreferrer">
-                {"Live <~>"}
-              </a>
-            )}
-            <a className={`${styles.link} ${props.demo ? styles.secondary : ""}`} href={props.link} target="_blank" rel="noreferrer">
-              {"Github >="}
+    <article className={styles.project}>
+      {props.src && (
+        <div className={styles.imageWrapper}>
+          <Image
+            src={props.src}
+            alt={props.title}
+            width={330}
+            height={201}
+            sizes="(max-width: 779px) 90vw, 420px"
+            quality={90}
+            className={styles.image}
+          />
+        </div>
+      )}
+      <ul className={styles.stack}>
+        {props.stack.map((tech) => (
+          <li className={styles.tag} key={tech}>
+            {tech}
+          </li>
+        ))}
+      </ul>
+      <div className={styles.info}>
+        <h4 className={styles.title}>{props.title}</h4>
+        <p className={styles.description}>{props.description}</p>
+        <div className={styles.links}>
+          {props.demo && (
+            <a className="btn" href={props.demo} target="_blank" rel="noreferrer">
+              {"Live <~>"}
             </a>
-          </div>
+          )}
+          <a
+            className={props.demo ? "btn btn-secondary" : "btn"}
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {"Github >="}
+          </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

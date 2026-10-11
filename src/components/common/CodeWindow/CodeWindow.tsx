@@ -31,6 +31,7 @@ export const CodeWindow = ({ fileName, lines, className }: TProps) => {
                     {text}
                   </span>
                 ))}
+                {i === lines.length - 1 && <span className={styles.cursor} />}
               </code>
             </div>
           ))}

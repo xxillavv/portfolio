@@ -3,15 +3,13 @@ import Image from "next/image";
 import skillsImage from "@/public/skills-background.png";
 import { SkillsItem } from "@/components/about/SkillsAboutPage/SkillItem/SkillsItem";
 import { skills } from "@/data/data";
+import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 
 const SkillsHomePage = () => {
   return (
     <section className={styles.skills}>
       <div className="container">
-        <h3 className={styles.header}>
-          <span className={styles.span}>#</span>
-          skills
-        </h3>
+        <SectionTitle props={{ span: "#", text: "skills", margin: 20 }} />
         <div className={styles.wrapper}>
           <Image
             src={skillsImage}

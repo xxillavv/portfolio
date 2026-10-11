@@ -2,6 +2,7 @@ import { projects } from "@/data/data";
 import styles from "./projects.module.scss";
 import Link from "next/link";
 import Project from "./Project/Project";
+import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 
 const Projects = () => {
   return (
@@ -9,9 +10,7 @@ const Projects = () => {
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.top}>
-            <h3 className={styles.heading}>
-              <span className={styles.span}>#</span>projects
-            </h3>
+            <SectionTitle props={{ span: "#", text: "projects", margin: 0 }} />
             <Link href="/works" className={styles.link}>
               {"View all ~~>"}
             </Link>

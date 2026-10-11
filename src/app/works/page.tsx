@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import { SectionTitle } from "@/components/home/SectionTitle/SectionTitle";
 import { CompleteApps } from "@/components/works/CompleteApps/CompleteApps";
 import SmallProjects from "@/components/works/SmallProjects/SmallProjects";
+
+export const metadata: Metadata = { title: "Projects" };
 
 const page = () => {
   return (

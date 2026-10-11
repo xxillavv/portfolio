@@ -15,9 +15,14 @@ const Hero = () => {
             <p className={styles.leftSubtitle}>
               He crafts responsive websites where technologies meet creativity
             </p>
-            <Link href="/contacts" className={styles.link}>
-              Contact me!!
-            </Link>
+            <div className={styles.actions}>
+              <Link href="/contacts" className="btn">
+                Contact me!!
+              </Link>
+              <a href="/Vladyslav-Paniv-CV.pdf" download className="btn btn-secondary">
+                Download CV
+              </a>
+            </div>
           </div>
           <div className={styles.right}>
             <CodeWindow fileName="vladyslav.ts" lines={heroCode} className={styles.image} />

@@ -74,7 +74,34 @@
 
 .mediaWrapper {
   display: flex;
-  gap: 8px;
+  gap: 12px;
+
+  @media (max-width: 650px) {
+    justify-content: center;
+  }
+}
+
+.mediaLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba($grey, 0.35);
+  transition: border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: $pink;
+    transform: translateY(-2px);
+  }
+}
+
+.email {
+  transition: color 0.2s;
+
+  &:hover {
+    color: $pink;
+  }
 }
 
 .license {

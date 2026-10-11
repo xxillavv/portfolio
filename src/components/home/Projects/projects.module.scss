@@ -13,62 +13,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
-
   gap: 16px;
+  margin-bottom: 48px;
 
   @media (max-width: 780px) {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
-}
-
-.heading {
-  position: relative;
-}
-
-.heading::after {
-  position: absolute;
-  content: "";
-  background-color: $pink;
-  width: 701px;
-  height: 1px;
-  margin-left: 25px;
-  top: 50%;
-
-  @media (max-width: 1150px) {
-    max-width: 300px;
-  }
-
-  @media (max-width: 780px) {
-    width: 0;
-  }
-}
-
-.heading,
-.span {
-  font-size: 32px;
-  font-weight: 500;
-
-  @media (max-width: 780px) {
-    font-size: 28px;
-  }
-}
-
-.span {
-  color: $pink;
 }
 
 .link {
   font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
+  transition: color 0.2s;
 
-  @media (max-width: 1150px) {
-    font-size: 22px;
-  }
-
-  @media (max-width: 780px) {
-    font-size: 18px;
+  &:hover {
+    color: $pink;
   }
 
   @media (max-width: 400px) {
@@ -77,13 +37,7 @@
 }
 
 .bottom {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 20px;
-  align-items: start;
-
-  @media (max-width: 1150px) {
-    justify-content: center;
-    align-items: center;
-  }
 }
