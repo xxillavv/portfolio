@@ -16,7 +16,7 @@ type TProps = {
 
 const Project = ({ props }: TProps) => {
   return (
-    <article className={styles.project}>
+    <article className={`${styles.project} reveal`}>
       {props.src && (
         <div className={styles.imageWrapper}>
           <Image

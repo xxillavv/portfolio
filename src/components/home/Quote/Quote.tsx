@@ -4,7 +4,7 @@ const Quote = () => {
   return (
     <section className={styles.quote}>
       <div className="container">
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} reveal`}>
           <h2 className={styles.text}>
             With great power comes great electricity bill
           </h2>

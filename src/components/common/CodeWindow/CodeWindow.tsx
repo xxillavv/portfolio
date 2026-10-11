@@ -7,11 +7,12 @@ type TProps = {
   fileName: string;
   lines: Token[][];
   className?: string;
+  wide?: boolean;
 };
 
-export const CodeWindow = ({ fileName, lines, className }: TProps) => {
+export const CodeWindow = ({ fileName, lines, className, wide }: TProps) => {
   return (
-    <div className={`${styles.root} ${className ?? ""}`} aria-hidden="true">
+    <div className={`${styles.root} ${wide ? styles.wide : ""} ${className ?? ""}`} aria-hidden="true">
       <span className={styles.squares} />
       <span className={styles.dots} />
       <div className={styles.window}>

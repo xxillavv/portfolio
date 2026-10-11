@@ -142,6 +142,18 @@ button {
 
 // Shared UI
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 ::selection {
   background-color: rgba(#c778dd, 0.35);
 }
@@ -180,22 +192,31 @@ button {
   }
 }
 
-// Sections fade in as they scroll into view (browsers without
-// scroll-driven animations just show them as-is)
-@keyframes reveal {
+// Blocks marked `.reveal` fade up when they scroll into view (see RevealObserver).
+// `reveal-ready` is only set when JS runs and motion is allowed.
+.reveal-ready .reveal:not(.is-visible) {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes reveal-in {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    translate: 0 24px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
 
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    main > section:not(:first-child) {
-      animation: reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 40%;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .reveal.is-visible {
+    animation: none;
   }
 }
 

@@ -34,7 +34,7 @@ const Media = () => {
               </>
             );
             return (
-              <li key={href ?? text}>
+              <li key={href ?? text} className="reveal">
                 {href ? (
                   <a
                     className={styles.link}

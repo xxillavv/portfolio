@@ -9,7 +9,7 @@ type TProps = {
 
 export const SkillsItem = ({ props }: TProps) => {
   return (
-    <div className={styles.item}>
+    <div className={`${styles.item} reveal`}>
       <p className={styles.title}>{props.title}</p>
       <ul className={styles.list}>
         {props.items.map((item) => (

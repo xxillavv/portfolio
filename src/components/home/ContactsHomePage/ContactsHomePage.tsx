@@ -8,7 +8,7 @@ const ContactsHomePage = () => {
       <div className="container">
         <SectionTitle props={{ span: "#", text: "contacts", margin: 45 }} />
         <div className={styles.wrapper}>
-          <p className={styles.text}>
+          <p className={`${styles.text} reveal`}>
             I’m actively looking for a full-time remote position as a Frontend
             or Fullstack Developer. I’m open to working with modern web
             technologies, building scalable and user-friendly applications, and

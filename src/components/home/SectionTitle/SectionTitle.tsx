@@ -15,7 +15,7 @@ export const SectionTitle = ({ props }: TProps) => {
   return (
     <h3
       style={{ marginBottom: props.margin }}
-      className={`${styles.heading} ${line ? styles.withLine : ""}`}
+      className={`${styles.heading} ${line ? styles.withLine : ""} reveal`}
     >
       <span className={styles.span}>{props.span}</span>
       {props.text}

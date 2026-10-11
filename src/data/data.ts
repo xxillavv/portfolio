@@ -128,12 +128,13 @@ export const skills = [
 ]
 
 export const facts = [
-  'I like winter more than summer',
-  'I often bike with my friends',
-  'I like pizza and pasta',
-  'I was in Egypt, Poland and Turkey',
-  'My favorite movie is Fear',
-  'I am still in university'
+  'I study Systems Analysis & Data Science at Lviv Polytechnic',
+  'I am a self-taught developer',
+  'I spent 6 months freelancing, shipping code for students',
+  'I am building NEXUS.gg, one stats hub for many games',
+  'I wrote a Telegram bot that replies in my own texting style',
+  'I use Neovim and Linux',
+  'I speak Ukrainian natively and English at upper-intermediate',
 ]
 
 export const paths = [

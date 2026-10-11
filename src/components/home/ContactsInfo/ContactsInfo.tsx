@@ -15,7 +15,7 @@ const contacts = [
 
 export const ContactsInfo = () => {
   return (
-    <div className={styles.info}>
+    <div className={`${styles.info} reveal`}>
       <p className={styles.infoTitle}>Message me here</p>
       <ul className={styles.list}>
         {contacts.map(({ icon, text, href }) => {

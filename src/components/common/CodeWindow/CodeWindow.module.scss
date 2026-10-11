@@ -11,6 +11,15 @@
   }
 }
 
+.wide {
+  max-width: 720px;
+
+  // long prose lines wrap instead of scrolling sideways
+  .line {
+    white-space: pre-wrap;
+  }
+}
+
 // Pink outlined squares (as in the old decorative PNGs)
 .squares,
 .squares::before {

@@ -3,6 +3,8 @@ import Footer from "@/components/layout/Footer/Footer";
 import "./reset.scss";
 import { Header } from "@/components/layout/Header/Header";
 import { Fira_Code } from "next/font/google";
+import { Cursor } from "@/components/common/Cursor/Cursor";
+import { RevealObserver, revealInitScript } from "@/components/common/Reveal/RevealObserver";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -36,11 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={firaCode.className}>
+    <html lang="en" className={firaCode.className} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: revealInitScript }} />
+      </head>
       <body>
+        <Cursor />
         <Header />
         <main>{children}</main>
         <Footer />
+        <RevealObserver />
       </body>
     </html>
   );

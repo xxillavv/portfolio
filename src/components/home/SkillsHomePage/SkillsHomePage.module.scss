@@ -33,9 +33,14 @@
 .skillsWrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: 16px;
   flex: 0 1 640px;
+
+  // an odd card out fills the last row instead of leaving a hole
+  > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 
   @media (max-width: 900px) {
     flex-basis: 100%;

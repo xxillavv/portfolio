@@ -6,7 +6,7 @@ const tones = [styles.toneInner, styles.toneMiddle, styles.toneOuter];
 
 export const SkillsOrbit = () => {
   return (
-    <figure className={styles.figure}>
+    <figure className={`${styles.figure} reveal`}>
       <div className={styles.orbit} aria-hidden="true">
         {orbit.map((ring, r) => (
           <div

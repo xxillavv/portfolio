@@ -10,7 +10,7 @@ const AboutAboutPage = () => {
         <SectionTitle props={{span: '/', text: 'about-me', margin: 14}}/>
         <p className={styles.subHeader}>Who am i?</p>
         <div className={styles.wrapper}>
-          <p className={styles.text}>
+          <p className={`${styles.text} reveal`}>
             Hello, i’m Vladyslav!
             <br />
             <br />
@@ -24,7 +24,7 @@ const AboutAboutPage = () => {
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>
-          <CodeWindow fileName="~/about" lines={aboutCode} className={styles.image} />
+          <CodeWindow fileName="~/about" lines={aboutCode} className={`${styles.image} reveal`} />
         </div>
       </div>
     </section>

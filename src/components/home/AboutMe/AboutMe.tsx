@@ -10,7 +10,7 @@ const AboutMe = () => {
       <div className="container">
         <SectionTitle props={{ span: "#", text: "about-me", margin: 23 }} />
         <div className={styles.wrapper}>
-          <div className={styles.left}>
+          <div className={`${styles.left} reveal`}>
             <p className={styles.text}>
               Hello, i’m Vladyslav!
               <br />
@@ -29,7 +29,7 @@ const AboutMe = () => {
               {"Read More ->"}
             </Link>
           </div>
-          <CodeWindow fileName="~/about" lines={aboutCode} className={styles.image} />
+          <CodeWindow fileName="~/about" lines={aboutCode} className={`${styles.image} reveal`} />
         </div>
       </div>
     </section>
